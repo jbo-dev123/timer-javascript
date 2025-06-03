@@ -16,6 +16,24 @@ function iniciaRelogio() {
     }, 1000);
 }
 
+document.addEventListener('click',function (e) {
+    const elementoSendoClicado = e.target;
+    
+    if (elementoSendoClicado.classList.contains('iniciar')) {
+        iniciaRelogio()
+    }
+
+    if (elementoSendoClicado.classList.contains('pausar')) {
+        clearInterval(timer);
+    }
+
+    if (elementoSendoClicado.classList.contains('zerar')) {
+        clearInterval(timer);
+        relogio.innerHTML = '00:00:00'
+        segundos = 0;
+    }
+})
+
 
 
 
