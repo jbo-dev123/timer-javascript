@@ -20,14 +20,18 @@ document.addEventListener('click',function (e) {
     const elementoSendoClicado = e.target;
     
     if (elementoSendoClicado.classList.contains('iniciar')) {
-        iniciaRelogio()
+        relogio.classList.remove('pausado');
+        iniciaRelogio();
+        
     }
 
     if (elementoSendoClicado.classList.contains('pausar')) {
+        relogio.classList.add('pausado');        
         clearInterval(timer);
     }
 
     if (elementoSendoClicado.classList.contains('zerar')) {
+        relogio.classList.remove('pausado');
         clearInterval(timer);
         relogio.innerHTML = '00:00:00'
         segundos = 0;
