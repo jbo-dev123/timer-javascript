@@ -3,6 +3,7 @@ function criaHoraDosSegundos(segundos) {
     return data.toLocaleTimeString('pt-BR', {
         timeZone: 'GMT'
     })
+
 }
 
 const relogio = document.querySelector('.relogio');
@@ -14,20 +15,23 @@ function iniciaRelogio() {
         segundos++;
         relogio.innerHTML = criaHoraDosSegundos(segundos);
     }, 1000);
+
 }
 
-document.addEventListener('click',function (e) {
+document.addEventListener('click', function (e) {
     const elementoSendoClicado = e.target;
-    
+
     if (elementoSendoClicado.classList.contains('iniciar')) {
         relogio.classList.remove('pausado');
+        clearInterval(timer)
         iniciaRelogio();
-        
+
     }
 
     if (elementoSendoClicado.classList.contains('pausar')) {
-        relogio.classList.add('pausado');        
+        relogio.classList.add('pausado');
         clearInterval(timer);
+
     }
 
     if (elementoSendoClicado.classList.contains('zerar')) {
@@ -35,7 +39,9 @@ document.addEventListener('click',function (e) {
         clearInterval(timer);
         relogio.innerHTML = '00:00:00'
         segundos = 0;
+
     }
+
 })
 
 
