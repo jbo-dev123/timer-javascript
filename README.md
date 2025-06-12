@@ -22,3 +22,8 @@ Este é um projeto simples de **Timer** utilizando HTML, CSS e JavaScript.
 1. Clone o repositório:
    ```bash
    git clone https://github.com/jbo-dev123/timer-javascript.git
+
+## 🌐 Acesse o projeto online
+
+Você pode acessar o site funcionando neste link:  
+👉 [https://jbo-dev123.github.io/timer-javascript/](https://jbo-dev123.github.io/timer-javascript/)
